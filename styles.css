@@ -82,6 +82,7 @@ nav{
     width: 94px;
     color: #FFFFFF;
     font-size: 16px;
+    transition: 0.25s;
 }
 
 .nav_search input:focus{
