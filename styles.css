@@ -37,12 +37,13 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .nav ul{
     display: flex;
     justify-content: space-between;
-    gap: 45px;
+    gap: 30px;
     list-style: none;
 }
 
@@ -57,6 +58,7 @@ nav{
     /* width: 80px; */
     display: flex;
     justify-content: center;
+    transition: 0.2s;
 }
 
 .nav ul a:hover{
@@ -116,6 +118,7 @@ nav{
 
 .left_hero{
     color: #770061;
+
 }
 
 .left_hero h1{
@@ -125,10 +128,15 @@ nav{
     line-height: 1.05;
 }
 .left_hero p{
+    width: 375px;
     font-size: 18px;
-    margin-top: 16px;
+    margin-top: 24px;
     font-family: "poppins",sans-serif;
     font-weight: 500;
+}
+.right_hero, .right_hero img{
+    width: 40vw;
+    height: auto;
 }
 
 .p_button{
@@ -139,7 +147,9 @@ nav{
     font-family: "poppins",sans-serif;
     font-size: 16px;
     font-weight: 500px;
-    margin-top: 32px
+    margin-top: 32px;
+    border: none;
+    cursor: pointer;
 }
 
 .p_button:hover{
@@ -275,4 +285,134 @@ footer .bottom .wrapper .payment_methods{
 
 footer .bottom .wrapper .payment_methods img{
     width: 30px;
+}
+
+
+
+@media (max-width: 1256px) {
+    .hero_section h1{
+        font-size: 60px;
+    }
+    .hero_section p{
+        font-size: 14px;
+        margin-top: 40px;
+    }
+    .hero_section .p_button{
+        margin-top: 40px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .nav{
+        margin: 0 16px;
+    }
+    .hero_section{
+        gap: 6px;
+        padding: 96px 64px;
+}
+    .left_hero{
+        margin-top: 56px;
+        width: 50vw;
+        height: auto;
+    }
+    .right_hero, .right_hero img{
+        width: 45vw;
+        height: auto;
+    }
+
+    .trending_section .image img{
+        width: 335px;
+        height: auto;
+    }
+
+    .trending_section .image{
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 899px) {
+
+    .nav .menu_item{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #770061c2;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        display: none;
+        padding: 0;
+    }
+
+    .nav .menu_item a{
+        width: 100%;
+    }
+    .hero_section{
+        padding: 48px 0;
+        padding-bottom: 88px;
+    }
+    .hero_section .left_hero h1{
+        font-size: 50px;
+    }
+    .hero_section .left_hero p{
+        font-size: 14px;
+        margin-top: 24px;
+    }
+    .hero_section .left_hero .p_button{
+        margin-top: 24px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .nav{
+        margin: 0 16px;
+    }
+    .hero_section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+    }
+    .left_hero{
+        align-items: center;
+        justify-content: center;
+        margin-top: 72px;
+        height: auto;
+    }
+    .left_hero, .right_hero, .right_hero img{
+        width: 80vw;
+        height: auto;
+    }
+    .trending_section .image{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .trending_section .image img{
+        width: 80vw;
+        height: auto;
+    }
+}
+
+@media (max-width:550px){
+   
+    .hero_section .left_hero{
+        text-align: center;
+    } 
+
+    .left_hero {
+        width: 80vw;
+        height: auto;
+    }
+
+
+    
+    .right_hero, .right_hero img{
+        width: 90vw;
+        height: auto;
+    }
+     .left_hero p{
+        width: 100%;
+    }
 }
