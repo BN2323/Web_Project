@@ -1,23 +1,51 @@
-// Toggle mobile menu
-const menuIcon = document.querySelector('.menu-icon');
-const navLinks = document.querySelector('.nav-links');
+// Side Menu Toggle
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById("sideMenu");
+const menuClose = document.getElementById("menuClose");
 
-menuIcon.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+
+menuToggle.addEventListener("click", () => {
+    sideMenu.style.display = "flex"; // Show the side menu
 });
 
-// Populate product showcase dynamically
-const products = [
-    { name: 'Shoe 1', image: 'images/shoe1.png' },
-    { name: 'Shoe 2', image: 'images/shoe2.png' },
-];
+menuClose.addEventListener("click", () => {
+    sideMenu.style.display = "none"; // Hide the side menu
+});
 
-const productContainer = document.querySelector('.product_showoff');
-products.forEach(product => {
-    const productDiv = document.createElement('div');
-    productDiv.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
-        <p>${product.name}</p>
-    `;
-    productContainer.appendChild(productDiv);
+// Sort List Toggle
+const sortToggle = document.getElementById("sortToggle");
+const sortList = document.getElementById("sortList");
+
+sortToggle.addEventListener("click", () => {
+    // Toggle visibility
+    if (sortList.style.display === "flex") {
+        sortList.style.display = "none";
+    } else {
+        sortList.style.display = "flex";
+    }
+});
+
+const heads = document.querySelectorAll('.head');
+
+// Add a click event to each 'head'
+heads.forEach((head) => {
+    head.addEventListener('click', () => {
+        // Toggle the display of the next sibling element (the list)
+        const list = head.nextElementSibling;
+
+        if (list.style.display === "flex" || list.style.display === "") {
+            list.style.display = "none"; // Hide the list
+        } else {
+            list.style.display = "flex"; // Show the list
+        }
+    });
+});
+
+const cards = document.querySelectorAll('.card');
+
+// Add a click event listener to each card
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        window.location.href = 'product.detail.html'; // Navigate to the product detail page
+    });
 });
