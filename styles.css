@@ -5,21 +5,26 @@
     box-sizing: border-box;   
     margin: 0;
 }
+
 body{
-    font-family: ""Poppins", "Inria Sans", sans-serif;
+    font-family: "Poppins", "Inria Sans", sans-serif;
 }
+
 header{
     height: 100vh;
     width: 100%;
     background-color: #f6f6f6;
 }
+
 nav{
     background-color: #770061;
     margin: 0;
     padding: 5px 0;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
+
 .wrapper{
     margin: 0 auto;
     width: 1152px;
@@ -34,12 +39,16 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+.nav .menu_item{
+    z-index: 100;
+}
 .nav ul{
     display: flex;
     justify-content: space-between;
-    gap: 45px;
+    gap: 8px;
     list-style: none;
 }
+
 .nav ul a{
     text-decoration: none;
     font-size: 16px;
@@ -51,21 +60,25 @@ nav{
     /* width: 80px; */
     display: flex;
     justify-content: center;
+    transition: 0.2s;
 }
+
 .nav ul a:hover{
     background-color: #5a0149;
 }
+
 .right_nav{
     display: flex;
     justify-content: space-between;
     gap: 34px;
 }
+
 .nav_search{
     width: 114px;
     display: flex;
     justify-content: flex-end;
-    
 }
+
 .nav_search input{
     background-color: transparent;
     border-color: #FFFFFF;
@@ -73,7 +86,9 @@ nav{
     width: 94px;
     color: #FFFFFF;
     font-size: 16px;
+    transition: 0.25s;
 }
+
 .nav_search input:focus{
     background-color: transparent#5a0149;
     border-color: #FFFFFF;
@@ -83,15 +98,19 @@ nav{
     font-size: 16px;
     outline: none;
 }
+
 .right_nav img{
     width: 35px;
+    filter: invert(1) brightness(70) saturate(100%);
+    transition: 0.1s ease;
+    cursor: pointer;
 }
-
-
-
-
-
-
+.right_nav img:hover{
+    opacity: 70%;
+}
+.right_nav #icon{
+    display: none;
+}
 /* Hero section */
 .hero_section{
     /* background-color: red; */
@@ -104,6 +123,7 @@ nav{
 
 .left_hero{
     color: #770061;
+
 }
 
 .left_hero h1{
@@ -113,8 +133,9 @@ nav{
     line-height: 1.05;
 }
 .left_hero p{
+    width: 375px;
     font-size: 18px;
-    margin-top: 16px;
+    margin-top: 24px;
     font-family: "poppins",sans-serif;
     font-weight: 500;
 }
@@ -127,7 +148,9 @@ nav{
     font-family: "poppins",sans-serif;
     font-size: 16px;
     font-weight: 500px;
-    margin-top: 32px
+    margin-top: 32px;
+    border: none;
+    cursor: pointer;
 }
 
 .p_button:hover{
@@ -186,59 +209,32 @@ nav{
     height: 530px;
 }
 
-
-
-
 /* Footer */
-footer .top{
+footer .bottom{
     border-top: 2px solid black;
-    height: 150px;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    padding: 16px 0;
-    border-bottom: 2px solid black;
 }
 
-footer .top .wrapper{
+footer .bottomn .nameshop{
     display: flex;
-    justify-content: space-between;
-}
-
-footer .top .right{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-}
-
-footer .top .right p{
-    font-family: "poppins",sans-serif;
-    font-size: 14px;
-    font-weight: 900px;
-}
-
-
-footer .top .right .icons{
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    height: 14px;
+    flex-direction: column;
 }
 
 footer .bottom{
-    margin: 16px 0;
+    margin: 18px 0;
 }
 footer .bottom .wrapper{
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 32px;
 }
 
-footer .bottom .wrapper div{
+footer .bottom .wrapper .shopwithus, footer .bottom .wrapper .about{
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    gap: 5px;
+    gap: 16px;
+    margin-top: 80px;
 }
 
 footer .bottom .wrapper h4{
@@ -247,11 +243,15 @@ footer .bottom .wrapper h4{
     font-weight: 700;
 }
 
+footer .bottom .wrapper .payment{
+    margin-top: 160px;
+}
 footer .bottom .wrapper a{
     text-decoration: none;
     font-size: 11px;
     font-family: "poppins",sans-serif;
     font-weight: 500;
+    color: rgba(0, 0, 0, 0.612);
 }
 
 footer .bottom .wrapper .payment_methods{
@@ -259,8 +259,330 @@ footer .bottom .wrapper .payment_methods{
     flex-direction: row;
     justify-content: center;
     gap: 11px;
+    margin-top: 8px;
 }
 
 footer .bottom .wrapper .payment_methods img{
     width: 30px;
+}
+footer .bottom .shop{
+    left: 50%;
+    transform: translate(-50%, -12%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+footer .bottom .shop h3{
+    font-family: "Poppins", "Inria Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    padding: 8px;
+}
+footer .bottom .shop p{
+    font-family: "Poppins", "Inria Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+footer .bottom .shop .icon{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+} 
+footer .bottom .shop .h_line{
+    margin-top: 24px;
+}
+footer .bottom .shop .icon img{
+    width: 18px;
+    height: auto;
+}
+
+
+/* Card */
+
+.card_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    /* padding: 16px 0; */
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.card_container .card{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card_container .card .image img{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: auto;
+    transition: 0.5s ease-in-out;
+    z-index: 30;
+}
+
+.card_container .card:hover .image img{
+    transform: translate(-55%, -60%) rotate(-25deg) scale(1.2);
+}
+.card_container .card .detail{
+    margin-top: 190px;
+    text-align: center;
+    padding: 0 40px;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.card_container .card:hover .detail{
+    margin-top: 150px;
+    text-align: center;
+    padding: 0 40px;
+}
+.card_container .card h2{
+    font-family: "Poppins", "Inria Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card_container .card span{
+    font-family: "Inria Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card_container .card a span{
+    display: none;
+    opacity: 0;
+    transition: 1s ease;
+}
+.card_container .card a{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    background-color: transparent;
+    width: fit-content;
+    border-radius: 25px;
+    top: 72.5%;
+    right: 20px;
+    transition: background-color 1s ease;
+}
+.card_container .card a:hover{
+    background-color: #55DA96;
+    padding-right: 8px;
+}
+
+.card_container .card a:hover span{
+    display: block;
+    opacity: 1;
+}
+.card_container .card a:hover:active{
+    background-color: #40B277;
+}
+.card_container .card a span{
+    font-family: "Poppins", "Inria Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+}
+
+.card_container .card a img{
+    font-family: "Poppins", "Inria Sans", sans-serif;
+    width: 16px;
+    height: auto;
+}
+.card_container .card p{
+    font-family: "Poppins", "Inria Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    color: black;
+} 
+.card_container .card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media (max-width: 1256px) {
+    .hero_section h1{
+        font-size: 60px;
+    }
+    .hero_section p{
+        font-size: 14px;
+        margin-top: 40px;
+    }
+    .hero_section .p_button{
+        margin-top: 40px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .nav{
+        margin: 0 16px;
+    }
+    .hero_section{
+        gap: 6px;
+        padding: 96px 64px;
+}
+    .left_hero{
+        margin-top: 56px;
+        width: 50vw;
+        height: auto;
+    }
+    .right_hero, .right_hero img{
+        width: 45vw;
+        height: auto;
+    }
+
+    .trending_section .image img{
+        width: 335px;
+        height: auto;
+    }
+
+    .trending_section .image{
+        padding: 0 32px;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 899px) {
+    header{
+        height: auto;
+    }
+    .nav .menu_item{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #770061c2;
+        backdrop-filter: blur(15px);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        display: none;
+        padding: 0;
+        transition: 0.5s;
+    }
+
+    .nav .menu_item a{
+        width: 100%;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+    }
+    .hero_section{
+        padding: 48px 0;
+        padding-bottom: 88px;
+    }
+    .hero_section .left_hero h1{
+        font-size: 50px;
+    }
+    .hero_section .left_hero p{
+        font-size: 14px;
+        margin-top: 24px;
+    }
+    .hero_section .left_hero .p_button{
+        margin-top: 24px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .nav{
+        margin: 0 16px;
+    }
+    .right_nav #icon{
+        display: block;
+    }
+    .hero_section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .left_hero{
+        align-items: center;
+        justify-content: center;
+        margin-top: 64px;
+        height: auto;
+    }
+    .left_hero, .right_hero img{
+        width: 80%;
+        height: auto;
+    }
+    .trending_section .image{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .trending_section .image img{
+        width: 80%;
+        height: auto;
+    }
+    .right_hero{
+        flex: 1;
+        margin-bottom: 16px;
+    }
+    .right_hero img{
+        height: 90%;
+        width: auto;
+    }
+    footer .bottom .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .bottom .wrapper .payment{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    footer .bottom .wrapper .shopwithus{
+        margin-top: 264px;
+    }
+    footer .bottom .wrapper .about{
+        margin: 48px 0;
+    }
+}
+
+/* Mobile */
+@media (max-width:550px){
+    header{
+        height: auto;
+    }
+    .hero_section .left_hero{
+        text-align: center;
+    } 
+
+    .left_hero {
+        width: 80%;
+        height: auto;
+    }
+
+
+    
+    .right_hero, .right_hero img{
+        width: 90%;
+        height: auto;
+    }
+     .left_hero p{
+        width: 100%;
+    }
 }
