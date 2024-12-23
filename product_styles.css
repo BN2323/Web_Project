@@ -7,12 +7,14 @@
 
 body{
     font-family: "Poppins", "Inria Sans", sans-serif;
-    background-image: url(images/background.svg);
+    background-image: url(images/background.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(15px) brightness(0.8);
     background-repeat: no-repeat;
-    background-color: rgba(195, 195, 195, 0.9);
+
+    
 }
 
 /* Top Section */
@@ -55,7 +57,7 @@ body{
     padding: 8px 0;
     width: 180px;
     color: rgba(0, 0, 0, 0.5);
-    border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.119);
     text-align: center;
 }
 .top .sort_container .list a:hover{
@@ -69,7 +71,7 @@ body{
     justify-content: center;
     gap: 82px;
     padding: 8px 24px;
-    border: 2px solid #000000;
+    border: 2px solid #00000088;
     opacity: 50%;
     transition: 0.5 ease-in-out;
     cursor: pointer;
@@ -79,6 +81,7 @@ body{
     font-family: "Poppins", "Inria Sans", sans-serif;
     font-size: 14px;
     font-weight: 500;
+    color: #000000;
 }
 .top .sort img{
     width: 20px;
@@ -145,7 +148,7 @@ body{
     height: 400px;
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
     border-radius: 5px;
@@ -159,7 +162,7 @@ body{
     transform: translate(-50%, -50%);
     width: 240px;
     height: auto;
-    transition: 0.5s ease-in-out;
+    transition: 0.45s ease-in-out;
 }
 
 .container .card:hover .image img{
@@ -169,7 +172,7 @@ body{
     margin-top: 250px;
     text-align: center;
     padding: 0 40px;
-    color: white;
+    color: rgb(255, 255, 255);
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
