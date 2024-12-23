@@ -18,10 +18,8 @@ header{
   align-content: center;
   justify-content: center;
   background-image: url(images/background.jpg);
-  /* background-color: #52cf9b; */
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-color: rgba(195, 195, 195, 0.9); */
 }
 
 /* Main Login Section */
