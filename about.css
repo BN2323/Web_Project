@@ -10,14 +10,13 @@ header{
 }
 body{
     font-family: "Poppins", "Inria Sans", sans-serif;
-    background-image: url(images/background.svg);
+    background-image: url(images/background.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    backdrop-filter: blur(15px) brightness(0.8);
     background-repeat: no-repeat;
-    background-color: rgba(195, 195, 195, 0.9);
-    height: 100vh;
-    margin: 0;
+    background-color: transparent;
 }
 
 .wrappers{
