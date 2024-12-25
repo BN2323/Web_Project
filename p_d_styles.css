@@ -1,3 +1,9 @@
+:root{
+    --main-color: #333333;
+    --background-color: #f6f6f6;
+    --grey-color: #d6d6d6;
+}
+
 *,
 *::after,
 *::before{
@@ -182,27 +188,27 @@ header{
 
 .container .button .left{
     background-color: transparent;
-    border: 2px solid #770061;
-    color: #770061;
-    transition: 0.5s ease;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    transition: 0.2s ease;
 }
 
 .container .button .right{
-    background-color: #770061;
+    background-color: var(--main-color);
     color: white;
-    transition: 0.5s ease;
+    transition: 0.2s ease;
 }
 
 .container .button .left:hover{
-    background-color: #770061;
+    background-color: #000000;
     color: white;
-    border: 2px solid #770061;
+    border: 2px solid #000000;
 }
 
 .container .button .right:hover{
-    background-color: #49003c;
+    background-color: #000000;
     color: white;
-    border: 2px solid #000000;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 

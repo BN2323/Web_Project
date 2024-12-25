@@ -1,6 +1,7 @@
 :root{
     --main-color: #333333;
     --background-color: #f6f6f6;
+    --grey-color: #d6d6d6;
 }
 
 *,
@@ -143,7 +144,7 @@ body{
 .container .card{
     position: relative;
     width: 280px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.3);
@@ -153,21 +154,32 @@ body{
     cursor: pointer;
 }
 
+.container .card .image{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 8%);
+    width: 90%;
+    height: 50%;
+    background-color: var(--grey-color);
+    transition: 0.4s ease;
+}
 .container .card .image img{
     position: absolute;
-    top: 35%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 240px;
+    width: 200px;
     height: auto;
     transition: 0.45s ease-in-out;
 }
-
+.container .card:hover .image{
+    height: 48%;
+}
 .container .card:hover .image img{
     transform: translate(-55%, -80%) rotate(-25deg) scale(1.2);
 }
 .container .card .detail{
-    margin-top: 250px;
+    margin-top: 220px;
     text-align: center;
     padding: 0 40px;
     color: rgb(0, 0, 0);
@@ -175,7 +187,7 @@ body{
     transition: 0.5s ease-in-out;
 }
 .container .card:hover .detail{
-    margin-top: 215px;
+    margin-top: 190px;
     text-align: center;
     padding: 0 40px;
 }
@@ -206,7 +218,7 @@ body{
     background-color: transparent;
     width: fit-content;
     border-radius: 25px;
-    top: 61.5%;
+    top:63.5%;
     right: 20px;
     transition: background-color 1s ease;
 }
@@ -238,11 +250,10 @@ body{
     font-family: "Poppins", "Inria Sans", sans-serif;
     font-size: 12px;
     font-weight: 500;
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0; */
+    /* visibility: hidden; */
     transition: 0.5s ease-in-out;
 }
-.container .card:hover .detail p,
 .container .card:hover .detail .size, 
 .container .card:hover .detail .color{
     opacity: 1;
@@ -260,10 +271,10 @@ body{
 }
 
 .container .card .detail .size{
-    margin-top: 16px;
+    margin-top: 12px;
 }
 .container .card .detail .color{
-    margin-top: 16px;
+    margin-top: 8px;
 }
 .container .card .detail .size h3, .container .card .detail .color h3{
     font-family: "Poppins", "Inria Sans", sans-serif;
@@ -281,6 +292,7 @@ body{
     text-align: center;
     color: #000;
     background-color: white;
+    border: 0.5px solid black;
     cursor: pointer;
     border-radius: 5px;
     transition: 0.1s ease;
