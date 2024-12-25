@@ -1,3 +1,8 @@
+:root{
+    --main-color: #333333;
+    --background-color: #f6f6f6;
+}
+
 *,
 *::after,
 *::before{
@@ -7,13 +12,7 @@
 
 body{
     font-family: "Poppins", "Inria Sans", sans-serif;
-    background-image: url(images/background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(15px) brightness(0.8);
-    background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: var(--background-color);
 }
 
 /* Top Section */
@@ -171,7 +170,7 @@ body{
     margin-top: 250px;
     text-align: center;
     padding: 0 40px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
