@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="loginstyles.css" />
+    <link rel="stylesheet" href="signupstyles.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -40,27 +40,33 @@
         </div>
       </nav>
 
-      <section class="login-container">
-        <div class="christmas">
-          <h2>Sign Up Your Account</h2>
-          <img src="images/santa.png" alt="Santa Wreath" />
-        </div>
+      <div class="loginwrapper">
+        <section class="login-container">
+          <div class="left">
+            <img src="images/log-sign-in.jpg" alt="Santa Wreath" />
+          </div>
 
-        <div class="login-form">
-          <form>
-            <h3>Sign Up</h3>
-            <input type="text" placeholder="Username" required />
-            <input type="email" placeholder="Email or Phone Number" required>
-            <input type="password" placeholder="Password" required />
-            <input type="password" placeholder="Confirm Password" required />
-            <button type="submit">Sign UP</button>
-          </form>
-        </div>
-      </section>
+          <div class="login-form">
+            <form>
+              <h3>Sign Up</h3>
+              <input type="text" placeholder="Username" required />
+              <input type="email" placeholder="Email or Phone Number" required>
+              <input type="password" placeholder="Password" required />
+              <input type="password" placeholder="Confirm Password" required />
+              <button type="submit">Sign UP</button>
+            </form>
+            <div class="signup">
+                <p>Don't have account?</p>
+                <a href="login.html" class="signup-link">Login now!</a>
+            </div>
+          </div>
+        </section>
+      </div>
+        
     </header>
 
     <!-- Footer Section -->
-    <footer>
+    <!-- <footer>
         <div class="bottom">
             <div class="wrapper">
                 <div class="shopwithus">
@@ -100,7 +106,7 @@
             </div>
         </div>
 
-    </footer>
+    </footer> -->
 
 
 

@@ -7,13 +7,7 @@
 
 body{
     font-family: "Poppins", "Inria Sans", sans-serif;
-    background-image: url(images/background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(15px) brightness(0.8);
-    background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: #f6f6f6;
 }
 
 header{
@@ -30,6 +24,7 @@ header{
 }
 
 .contact_card{
+    margin-top: 56px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +41,7 @@ header{
     font-family: "Poppins", "Inria Sans", sans-serif;
     font-size: 40px;
     font-weight: 700;
-    color: #770061;
+    color: #000000;
 }
 
 .contact_card input{
@@ -57,26 +52,26 @@ header{
     border-radius: 20px;
     padding: 16px;
     font-size: 16px;
-    border: 2px solid #770061;
+    border: 2px solid #000000;
 }
 
 .contact_card input:focus{
     background-color: #c7c7c7;
-    border: 2px solid #00ff3c;
+    border: 2px solid #000000;
 }
 .contact_card a{
     text-decoration: none;
     font-family: "Poppins", "Inria Sans", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #770061;
+    color: #000000;
     padding: 16px 20px;
     border-radius: 20px;
-    border:3px solid #770061;
+    border:3px solid #000000;
 }
 
 .contact_card a:hover{
-    background-color: #770061;
+    background-color: #000000;
     color: white;
     border:3px solid #f0f0f0;
 }
@@ -89,7 +84,10 @@ header{
     width: 90%;
     text-align: center;
 }
-
+.contact_card .logo img{
+    height: auto;
+    width: 64px;
+}
 
 @media (max-width:899px) {
     .contact_card{
