@@ -14,11 +14,6 @@
 
 
 
-  
-
-body{
-    
-}
 
 header{
     height: 100vh;
@@ -168,7 +163,7 @@ nav{
 }
 
 .p_button:hover{
-    background-color: #5a0149;
+    background-color: #000000;
     transform: scale(1.05);
 }
 
@@ -193,7 +188,7 @@ nav{
 
 .trending_section h3{
     margin-top: 16px;
-    font-family: "poppins",sans-serif;
+    font-family: "Inria Sans",sans-serif;
     font-size: 24px;
     font-weight: 600;
 }
@@ -566,7 +561,8 @@ footer .bottom .shop .icon img{
         margin-bottom: 16px;
     }
     .right_hero img{
-        height: 90%;
+        margin-top: 40px;
+        height: 80%;
         width: auto;
     }
     footer .bottom .wrapper{
